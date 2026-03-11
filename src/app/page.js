@@ -2,6 +2,7 @@
 
 import { Copy, Github, LoaderCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -108,6 +109,15 @@ export default function Home() {
             <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnaeemudheenp%2Fopen-puppeteer">
               <img src="https://vercel.com/button" alt="Deploy with Vercel" />
             </a>
+          </div>
+
+          <div className="flex justify-center mt-6">
+            <Link
+              href="/blog"
+              className="text-gray-600 hover:text-black underline text-sm"
+            >
+              Read our blog for tips on automation, testing, and developer productivity →
+            </Link>
           </div>
         </div>
       </div>

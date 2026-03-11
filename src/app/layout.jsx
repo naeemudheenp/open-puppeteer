@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+import OpenNotepadBanner from "../components/opennotepad-banner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,9 +37,11 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex justify-center items-center bg-white h-full w-full`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex justify-center items-center bg-white h-full w-full pt-14`}
       >
+        <OpenNotepadBanner />
         {children}
+        <Analytics />
       </body>
     </html>
   );
